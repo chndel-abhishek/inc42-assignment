@@ -1,6 +1,8 @@
+"use client"; 
+
 import Head from 'next/head';
 import axios from 'axios';
-import { useState, useEffect } from 'react'; // Import useState and useEffect
+import { useEffect, useState} from 'react';
 
 interface User {
   id: number;
@@ -8,6 +10,8 @@ interface User {
 }
 
 const HomePage = () => {
+  // useClient(); // Mark the component as a client component
+
   const [users, setUsers] = useState<User[]>([]);
 
   useEffect(() => {
